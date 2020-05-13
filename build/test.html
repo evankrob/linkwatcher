@@ -1,0 +1,476 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title>Template</title>
+    <link rel="stylesheet" href="styles.css" >
+  <meta charset="utf-8">
+
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    
+      
+    
+            <div class="h-screen flex overflow-hidden bg-gray-100">
+                <!-- Off-canvas menu for mobile -->
+                <div class="md:hidden">
+                  <div class="fixed inset-0 flex z-40">
+                    <!--
+                      Off-canvas menu overlay, show/hide based on off-canvas menu state.
+              
+                      Entering: "transition-opacity ease-linear duration-300"
+                        From: "opacity-0"
+                        To: "opacity-100"
+                      Leaving: "transition-opacity ease-linear duration-300"
+                        From: "opacity-100"
+                        To: "opacity-0"
+                    -->
+                    <div class="fixed inset-0">
+                      <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
+                    </div>
+                    <!--
+                      Off-canvas menu, show/hide based on off-canvas menu state.
+              
+                      Entering: "transition ease-in-out duration-300 transform"
+                        From: "-translate-x-full"
+                        To: "translate-x-0"
+                      Leaving: "transition ease-in-out duration-300 transform"
+                        From: "translate-x-0"
+                        To: "-translate-x-full"
+                    -->
+                    <div class="relative flex-1 flex flex-col max-w-xs w-full bg-gray-800">
+                      <div class="absolute top-0 right-0 -mr-14 p-1">
+                        <button class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600" aria-label="Close sidebar">
+                          <svg class="h-6 w-6 text-white" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+                        <div class="flex-shrink-0 flex items-center px-4">
+                          <img class="h-8 w-auto" src="https://placekitten.com/75/75" />
+                        </div>
+                        <nav class="mt-5 px-2">
+                          <a href="#" class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-white bg-gray-900 focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150">
+                            <svg class="mr-4 h-6 w-6 text-gray-300 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10M9 21h6"/>
+                            </svg>
+                            Dashboard
+                          </a>
+                          <a href="#" class="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                            <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                            Profile
+                          </a>
+                          <a href="#" class="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                            <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                            </svg>
+                            Projects
+                          </a>
+                          <a href="#" class="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                            <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            Calendar
+                          </a>
+                          <a href="#" class="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                            <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/>
+                            </svg>
+                            Documents
+                          </a>
+                          <a href="#" class="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                            <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            Reports
+                          </a>
+                        </nav>
+                      </div>
+                      <div class="flex-shrink-0 flex bg-gray-700 p-4">
+                        <a href="#" class="flex-shrink-0 group block">
+                          <div class="flex items-center">
+                            <div>
+                              <img class="inline-block h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+                            </div>
+                            <div class="ml-3">
+                              <p class="text-base leading-6 font-medium text-white">
+                                Tom Cook
+                              </p>
+                              <p class="text-sm leading-5 font-medium text-gray-400 group-hover:text-gray-300 transition ease-in-out duration-150">
+                                View profile
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="flex-shrink-0 w-14">
+                      <!-- Force sidebar to shrink to fit close icon -->
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Static sidebar for desktop -->
+                <div class="hidden md:flex md:flex-shrink-0">
+                  <div class="flex flex-col w-64 bg-gray-800">
+                    <div class="h-0 flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
+                      <div class="flex items-center flex-shrink-0 px-4">
+                        <img class="h-8 w-auto" src="https://placekitten.com/75/75" alt="Workflow" />
+                      </div>
+                      <!-- Sidebar component, swap this element with another sidebar if you like -->
+                      <nav class="mt-5 flex-1 px-2 bg-gray-800">
+                        <a href="#" class="group flex items-center px-2 py-2 text-sm leading-5 font-medium text-white rounded-md bg-gray-900 focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150">
+                          <svg class="mr-3 h-6 w-6 text-gray-300 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10M9 21h6"/>
+                          </svg>
+                          Dashboard
+                        </a>
+                        <a href="#" class="mt-1 group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                          <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                          </svg>
+                          Account
+                        </a>
+                        <a href="#domains" class="mt-1 group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                          <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                          </svg>
+                         Domains
+                        </a>
+                        <a href="#info" class="mt-1 group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                          <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                          </svg>
+                          Information
+                        </a>
+                        <a href="#notifications" class="mt-1 group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                          <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/>
+                          </svg>
+                          Notifications
+                        </a>
+                        <a href="#plans" class="mt-1 group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150">
+                          <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                          </svg>
+                          Plan Level
+                        </a>
+                      </nav>
+                    </div>
+                    <div class="flex-shrink-0 flex bg-gray-700 p-4">
+                      <a href="#" class="flex-shrink-0 w-full group block">
+                        <div class="flex items-center">
+                          
+                          <div class="ml-3">
+                            <p class="text-sm leading-5 font-medium text-white">
+                              Username
+                            </p>
+                            <p class="text-xs leading-4 font-medium text-gray-300 group-hover:text-gray-200 transition ease-in-out duration-150">
+                              Logout
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col w-0 flex-1 overflow-hidden">
+                  <div class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
+                    <button class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150" aria-label="Open sidebar">
+                      <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <main class="flex-1 relative z-0 overflow-y-auto pt-2 pb-6 focus:outline-none md:py-6" tabindex="0">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                      <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
+                    </div>
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+                      <!-- Replace with your content -->
+
+
+                      <div>
+  <div class="md:grid md:grid-cols-3 md:gap-6">
+    <div class="md:col-span-1" id="domains">
+      <div class="px-4 sm:px-0">
+        <h3 class="text-lg font-medium leading-6 text-gray-900">Domain(s)</h3>
+        <p class="mt-1 text-sm leading-5 text-gray-600">
+          Careful, if you change your target domain you'll reset your account
+        </p>
+      </div>
+    </div>
+    <div class="mt-5 md:mt-0 md:col-span-2">
+      <form action="#" method="POST">
+        <div class="shadow sm:rounded-md sm:overflow-hidden">
+          <div class="px-4 py-5 bg-white sm:p-6">
+            <div class="grid grid-cols-3 gap-6">
+              <div class="col-span-3 sm:col-span-2">
+                <label for=targetDomain" class="block text-sm font-medium leading-5 text-gray-700">
+                  TargetDomain
+                </label>
+                <div class="mt-1 flex rounded-md shadow-sm">
+                  <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                    http://
+                  </span>
+                  <input id="company_website" class="form-input flex-1 block w-full rounded-none rounded-r-md transition duration-150 ease-in-out sm:text-sm sm:leading-5" placeholder="www.example.com" />
+                </div>
+              </div>
+            </div>
+
+            
+          <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            <span class="inline-flex rounded-md shadow-sm">
+              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
+                Save
+              </button>
+            </span>
+          </div>
+        </div>
+      </form>
+     
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 m-2">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="ml-3">
+            <p class="text-sm leading-5 text-yellow-700">
+              Your plan has 1 domain.
+              <a href="#plans" class="font-medium underline text-yellow-700 hover:text-yellow-600 transition ease-in-out duration-150">
+                Upgrade your account to add more domains.
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="hidden sm:block">
+  <div class="py-5">
+    <div class="border-t border-gray-200"></div>
+  </div>
+</div>
+
+<div class="mt-10 sm:mt-0">
+  <div class="md:grid md:grid-cols-3 md:gap-6" id="info">
+    <div class="md:col-span-1">
+      <div class="px-4 sm:px-0">
+        <h3 class="text-lg font-medium leading-6 text-gray-900">Information</h3>
+        <p class="mt-1 text-sm leading-5 text-gray-600">
+          Use a permanent address where you can receive mail.
+        </p>
+      </div>
+    </div>
+    <div class="mt-5 md:mt-0 md:col-span-2">
+      <form action="#" method="POST">
+        <div class="shadow overflow-hidden sm:rounded-md">
+          <div class="px-4 py-5 bg-white sm:p-6">
+            <div class="grid grid-cols-6 gap-6">
+              <div class="col-span-6 sm:col-span-3">
+                <label for="first_name" class="block text-sm font-medium leading-5 text-gray-700">First name</label>
+                <input id="first_name" class="mt-1 form-input block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+              </div>
+
+              <div class="col-span-6 sm:col-span-3">
+                <label for="last_name" class="block text-sm font-medium leading-5 text-gray-700">Last name</label>
+                <input id="last_name" class="mt-1 form-input block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+              </div>
+
+              <div class="col-span-6 sm:col-span-4">
+                <label for="email_address" class="block text-sm font-medium leading-5 text-gray-700">Email address</label>
+                <input id="email_address" class="mt-1 form-input block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+              </div>
+
+              <div class="col-span-6 sm:col-span-3">
+                <label for="country" class="block text-sm font-medium leading-5 text-gray-700">Country / Region</label>
+                <select id="country" class="mt-1 block form-select w-full py-2 px-3 py-0 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
+                  <option>United States</option>
+                  <option>Canada</option>
+                  <option>Mexico</option>
+                </select>
+              </div>
+
+              
+
+              
+
+              
+
+              
+            </div>
+          </div>
+          <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            <button class="py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-500 focus:outline-none focus:shadow-outline-blue active:bg-indigo-600 transition duration-150 ease-in-out">
+              Save
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="hidden sm:block">
+  <div class="py-5">
+    <div class="border-t border-gray-200"></div>
+  </div>
+</div>
+
+<div class="mt-10 sm:mt-0">
+  <div class="md:grid md:grid-cols-3 md:gap-6" id="notifications">
+    <div class="md:col-span-1">
+      <div class="px-4 sm:px-0">
+        <h3 class="text-lg font-medium leading-6 text-gray-900">Notifications</h3>
+        <p class="mt-1 text-sm leading-5 text-gray-600">
+          When do you want to get notified.
+        </p>
+      </div>
+    </div>
+    <div class="mt-5 md:mt-0 md:col-span-2">
+      <form action="#" method="POST">
+        <div class="shadow overflow-hidden sm:rounded-md">
+          <div class="px-4 py-5 bg-white sm:p-6">
+            <fieldset>
+              <legend class="text-base leading-6 font-medium text-gray-900">By Email</legend>
+              <div class="mt-4">
+                <div class="flex items-start">
+                  <div class="absolute flex items-center h-5">
+                    <input id="comments" type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
+                  </div>
+                  <div class="pl-7 text-sm leading-5">
+                    <label for="postqueue" class="ml-6 font-medium text-gray-700">Post Queue <span class="text-gray-500">(default)</span></label>
+                    <p class="text-gray-500">Get a summary when your queue is complete.</p>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <div class="flex items-start">
+                    <div class="absolute flex items-center h-5">
+                      <input id="candidates" type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
+                    </div>
+                    <div class="pl-7 text-sm leading-5">
+                      <label for="candidates" class="ml-6 font-medium text-gray-700">Weekly</label>
+                      <p class="text-gray-500">Get a summary at the beginning of the week.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <div class="flex items-start">
+                    <div class="absolute flex items-center h-5">
+                      <input id="offers" type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
+                    </div>
+                    <div class="pl-7 text-sm leading-5">
+                      <label for="offers" class="ml-6 font-medium text-gray-700">None, I'll check.</label>
+                      <p class="text-gray-500">We won't notify you at all.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            
+          </div>
+          <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            <button class="py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-500 focus:outline-none focus:shadow-outline-blue focus:bg-indigo-500 active:bg-indigo-600 transition duration-150 ease-in-out">
+              Save
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="hidden sm:block">
+    <div class="py-5">
+      <div class="border-t border-gray-200"></div>
+    </div>
+  </div>
+<div class="mt-10 sm:mt-0" id="plans">
+    <div class="md:grid md:grid-cols-3 md:gap-6">
+      <div class="md:col-span-1">
+        <div class="px-4 sm:px-0">
+          <h3 class="text-lg font-medium leading-6 text-gray-900">Plan Level</h3>
+          <p class="mt-1 text-sm leading-5 text-gray-600">
+            Upgrade or cancel your account.
+          </p>
+        </div>
+      </div>
+      <div class="mt-5 md:mt-0 md:col-span-2">
+        <form action="#" method="POST">
+          <div class="shadow overflow-hidden sm:rounded-md">
+            <div class="px-4 py-5 bg-white sm:p-6">
+            
+               
+                <fieldset class="mt-6">
+                    <legend class="text-base leading-6 font-medium text-gray-900">Plans</legend>
+                    <p class="text-sm leading-5 text-gray-500">Changing your plan will reset your billing cycle.</p>
+                    <div class="mt-4">
+                      <div class="flex items-center">
+                        <input id="push_everything" name="form-input push_notifications" type="radio" class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
+                        <label for="push_everything" class="ml-3">
+                          <span class="block text-sm leading-5 font-medium text-gray-700">Plan 1 - $9.99</span>
+                          <p class="text-gray-500">Details details and more details.</p>
+                        </label>
+                      </div>
+                      <div class="mt-4 flex items-center">
+                        <input id="push_email" name="form-input push_notifications" type="radio" class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
+                        <label for="push_email" class="ml-3">
+                          <span class="block text-sm leading-5 font-medium text-gray-700">Plan 2 - $99.99</span>
+                          <p class="text-gray-500">Details details and more details</p>
+                        </label>
+                      </div>
+                      <div class="mt-4 flex items-center">
+                        <input id="push_nothing" name="form-input push_notifications" type="radio" class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
+                        <label for="push_nothing" class="ml-3">
+                          <span class="block text-sm leading-5 font-medium text-gray-700">Plan 3 - $999.99</span>
+                          <p class="text-gray-500">Details details and more details.</p>
+                        </label>
+                        
+                      </div>
+                      <span class="inline-flex rounded-md shadow-sm mt-6">
+                        <button type="button" class="inline-flex items-center px-4 py-1.5 border border-red-200 text-xs leading-4 font-medium rounded text-red-300 bg-white hover:text-red-500 focus:outline-none focus:border-red-500 focus:shadow-outline-red active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150">
+                         Cancel Your Account
+                        </button>
+                      </span>
+                    </div>
+                  </fieldset>
+
+
+
+
+
+            
+              
+            </div>
+            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+              <button class="py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-500 focus:outline-none focus:shadow-outline-blue focus:bg-indigo-500 active:bg-indigo-600 transition duration-150 ease-in-out">
+                Save
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+                      <!-- /End replace -->
+                    </div>
+                  </main>
+                </div>
+              </div>
+        
+      
+
+
+</body>
+</html>
